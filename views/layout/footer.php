@@ -10,7 +10,6 @@
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
 
-
 <script>
     $(document).ready(function () {
 
@@ -44,7 +43,7 @@
         // ==========================================
 
         const htmlElement = document.documentElement;
-        // Ahora seleccionamos los botones de la Navbar y los de Móviles
+        // Seleccionamos los botones de la Navbar y los de Móviles
         const themeButtons = document.querySelectorAll('.theme-btn');
 
         const currentTheme = htmlElement.getAttribute('data-theme');
@@ -67,7 +66,7 @@
 
         function updateActiveNavButton(themeName) {
             themeButtons.forEach(btn => btn.classList.remove('active'));
-            // Ilumina todos los botones correspondientes (tanto en navbar como en sidebar móvil)
+            // Ilumina todos los botones correspondientes
             document.querySelectorAll(`[data-set-theme="${themeName}"]`).forEach(el => el.classList.add('active'));
         }
 

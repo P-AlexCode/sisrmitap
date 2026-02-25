@@ -45,7 +45,7 @@ require_once __DIR__ . '/views/layout/sidebar.php';
         </div>
 
         <div class="d-flex align-items-center">
-            <div class="theme-selector-nav me-4 d-none d-sm-flex shadow-sm">
+            <div class="theme-selector-nav me-3 d-none d-sm-flex shadow-sm">
                 <button class="theme-btn" data-set-theme="tecnm" title="Tema TecNM"><i
                         class="bi bi-building"></i></button>
                 <button class="theme-btn" data-set-theme="oscuro" title="Modo Oscuro"><i
@@ -54,11 +54,40 @@ require_once __DIR__ . '/views/layout/sidebar.php';
                         class="bi bi-palette-fill"></i></button>
             </div>
 
-            <span class="d-none d-md-block fw-medium" style="color: var(--text-main);">
-                <i class="bi bi-person-circle me-1" style="color: var(--accent-color);"></i>
-                <?= htmlspecialchars($_SESSION['nombre']); ?>
-                <small style="color: var(--text-muted);">(<?= $_SESSION['rol_id'] == 1 ? 'Admin' : 'Usuario' ?>)</small>
-            </span>
+            <div class="dropdown">
+                <button class="btn dropdown-toggle d-flex align-items-center border-0 p-0 shadow-none" type="button"
+                    id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="background: transparent;">
+                    <div class="rounded-circle d-flex justify-content-center align-items-center me-2 shadow-sm"
+                        style="width: 38px; height: 38px; background: rgba(0,0,0,0.05); color: var(--accent-color); border: 1px solid var(--glass-border-panel);">
+                        <i class="bi bi-person-fill fs-5"></i>
+                    </div>
+                    <div class="text-start d-none d-md-block" style="line-height: 1.1;">
+                        <span class="fw-bold d-block" style="color: var(--text-main); font-size: 0.9rem;">
+                            <?= htmlspecialchars($_SESSION['nombre']); ?>
+                        </span>
+                        <small style="color: var(--text-muted); font-size: 0.75rem;">
+                            <?= $_SESSION['rol_id'] == 1 ? 'Administrador' : 'Almacenista' ?>
+                        </small>
+                    </div>
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg mt-2 p-2" aria-labelledby="userDropdown"
+                    style="background: var(--glass-panel); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--glass-border-panel); border-radius: 16px; min-width: 220px;">
+                    <li class="px-3 py-2 border-bottom border-secondary border-opacity-10 mb-2">
+                        <span class="d-block fw-bold"
+                            style="color: var(--text-main);"><?= htmlspecialchars($_SESSION['nombre']); ?></span>
+                        <small
+                            style="color: var(--text-muted);"><?= $_SESSION['email'] ?? 'Usuario del Sistema' ?></small>
+                    </li>
+
+                    <li><a class="dropdown-item py-2 fw-bold text-danger rounded d-flex align-items-center"
+                            href="<?= BASE_URL ?>logout.php" style="transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(220,53,69,0.1)'"
+                            onmouseout="this.style.background='transparent'">
+                            <i class="bi bi-power me-2 fs-5"></i> Cerrar Sesión
+                        </a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 

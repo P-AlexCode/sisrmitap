@@ -35,8 +35,6 @@ $tema_actual = isset($_SESSION['tema']) ? $_SESSION['tema'] : 'tecnm';
         document.documentElement.setAttribute('data-theme', savedTheme);
     </script>
 
-
-</head>
 </head>
 
 <body>

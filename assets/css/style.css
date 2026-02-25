@@ -1,96 +1,74 @@
 /* ==========================================================================
    SISTEMA DE RECURSOS MATERIALES Y SERVICIOS V3
-   Estilo: AdminKit Solid & Clean (Basado en demo.adminkit.io)
+   Estilo: Premium Glassmorphism (Efecto Cristal Real con Orbes)
    ========================================================================== */
 
 /* ---------------------------------------------------
-   1. VARIABLES DE TEMAS (Colores Sólidos y Planos)
+   1. VARIABLES DE TEMAS (Fondos, Orbes y Cristales)
 ----------------------------------------------------- */
 
-/* TEMA 1: TecNM (Institucional - Sidebar Azul, Fondo Gris Claro) */
+/* TEMA 1: TecNM (Institucional - Azul #1B396A) */
 :root {
-    --bg-main: #f5f7fb;
-    /* Fondo gris muy claro estilo AdminKit */
-    --glass-sidebar: #1B396A;
-    /* Azul Sólido TecNM */
-    --glass-border-sidebar: transparent;
-    --glass-panel: #ffffff;
-    /* Tarjetas totalmente blancas */
-    --glass-border-panel: #e3e6f0;
-    /* Borde sutil gris */
+    --bg-main: #f4f6f9;
+    --blob1: rgba(27, 57, 106, 0.35);
+    --blob2: rgba(255, 158, 27, 0.3);
 
-    --glass-shadow: 0 0 0.875rem 0 rgba(33, 37, 41, 0.05);
-    /* Sombra suave AdminKit */
-    --text-sidebar: #e9ecef;
-    --text-main: #495057;
-    /* Texto principal gris oscuro */
+    --glass-sidebar: rgba(27, 57, 106, 0.85);
+    --glass-border-sidebar: rgba(255, 255, 255, 0.2);
+    --glass-panel: rgba(255, 255, 255, 0.7);
+    --glass-border-panel: rgba(255, 255, 255, 0.8);
+
+    --glass-shadow: 0 8px 32px 0 rgba(27, 57, 106, 0.15);
+    --text-sidebar: #ffffff;
+    --text-main: #212529;
     --text-muted: #6c757d;
-    --hover-sidebar: rgba(255, 255, 255, 0.05);
-    --active-sidebar: rgba(255, 255, 255, 0.1);
+    --hover-sidebar: rgba(255, 255, 255, 0.15);
+    --active-sidebar: rgba(255, 255, 255, 0.3);
     --accent-color: #1B396A;
-    /* Acentos en Azul */
-    --active-border: #ffffff;
-    /* Borde lateral del menú activo */
 }
 
-/* TEMA 2: Oscuro (AdminKit Dark - Fondos profundos) */
+/* TEMA 2: Oscuro (Gris profundo/Negro) */
 [data-theme="oscuro"] {
-    --bg-main: #202634;
-    /* Fondo oscuro profundo */
-    --glass-sidebar: #202634;
-    /* Sidebar se funde con el fondo */
-    --glass-border-sidebar: #2c3245;
-    /* Línea divisoria sutil */
-    --glass-panel: #293042;
-    /* Tarjetas un poco más claras */
-    --glass-border-panel: #353c4e;
+    --bg-main: #121212;
+    --blob1: rgba(99, 179, 237, 0.25);
+    --blob2: rgba(183, 148, 244, 0.2);
 
-    --glass-shadow: 0 0 0.875rem 0 rgba(0, 0, 0, 0.2);
-    --text-sidebar: #e9ecef;
-    --text-main: #adb5bd;
-    --text-muted: #8a93a2;
+    --glass-sidebar: rgba(26, 28, 35, 0.85);
+    --glass-border-sidebar: rgba(255, 255, 255, 0.05);
+    --glass-panel: rgba(30, 33, 43, 0.7);
+    --glass-border-panel: rgba(255, 255, 255, 0.05);
+
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    --text-sidebar: #e2e8f0;
+    --text-main: #f8f9fa;
+    --text-muted: rgba(255, 255, 255, 0.5);
     --hover-sidebar: rgba(255, 255, 255, 0.05);
-    --active-sidebar: rgba(255, 255, 255, 0.05);
-    --accent-color: #3b7ddd;
-    /* Azul eléctrico clásico de AdminKit Dark */
-    --active-border: #3b7ddd;
+    --active-sidebar: rgba(255, 255, 255, 0.15);
+    --accent-color: #63b3ed;
 }
 
-/* TEMA 3: Pastel (Suave y Limpio) */
+/* TEMA 3: Pastel (Rositas suaves) */
 [data-theme="pastel"] {
     --bg-main: #fff5f8;
-    --glass-sidebar: #d1496a;
-    /* Rosa Sólido */
-    --glass-border-sidebar: transparent;
-    --glass-panel: #ffffff;
-    --glass-border-panel: #f8e1e7;
+    --blob1: rgba(255, 182, 193, 0.5);
+    --blob2: rgba(209, 73, 106, 0.3);
 
-    --glass-shadow: 0 0 0.875rem 0 rgba(209, 73, 106, 0.08);
-    --text-sidebar: #ffffff;
+    --glass-sidebar: rgba(255, 182, 193, 0.65);
+    --glass-border-sidebar: rgba(255, 255, 255, 0.6);
+    --glass-panel: rgba(255, 255, 255, 0.6);
+    --glass-border-panel: rgba(255, 255, 255, 0.8);
+
+    --glass-shadow: 0 8px 32px 0 rgba(209, 73, 106, 0.15);
+    --text-sidebar: #4a4a4a;
     --text-main: #4a4a4a;
-    --text-muted: #8c8c8c;
-    --hover-sidebar: rgba(255, 255, 255, 0.1);
-    --active-sidebar: rgba(255, 255, 255, 0.2);
+    --text-muted: rgba(74, 74, 74, 0.6);
+    --hover-sidebar: rgba(255, 255, 255, 0.5);
+    --active-sidebar: rgba(255, 255, 255, 0.8);
     --accent-color: #d1496a;
-    --active-border: #ffffff;
 }
 
 /* ---------------------------------------------------
-   2. REINICIO DE ESTILOS (El "Asesino de Cristales")
------------------------------------------------------ */
-/* Estas reglas apagan cualquier efecto de blur o bordes redondeados excesivos que vengan de PHP */
-* {
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-}
-
-.blob {
-    display: none !important;
-    /* Adiós a los orbes flotantes */
-}
-
-/* ---------------------------------------------------
-   3. ESTRUCTURA PRINCIPAL Y LAYOUT
+   2. ESTILOS GLOBALES, ORBES Y TIPOGRAFÍA
 ----------------------------------------------------- */
 html,
 body {
@@ -98,36 +76,107 @@ body {
     overflow: hidden;
     margin: 0;
     padding: 0;
+}
+
+body {
     background-color: var(--bg-main);
     color: var(--text-main);
     font-family: 'Inter', sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    position: relative;
 }
 
+.blob {
+    position: absolute;
+    filter: blur(60px);
+    z-index: -1;
+    border-radius: 50%;
+    animation: float 15s infinite alternate ease-in-out;
+    transition: background-color 0.5s ease;
+}
+
+.blob.uno {
+    background-color: var(--blob1);
+    width: 50vw;
+    height: 50vh;
+    top: -10%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.blob.dos {
+    background-color: var(--blob2);
+    width: 60vw;
+    height: 60vh;
+    bottom: -10%;
+    right: -10%;
+    animation-delay: -5s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(5%, -5%) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-3%, 3%) scale(0.9);
+    }
+
+    100% {
+        transform: translate(5%, 5%) scale(1);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(150, 150, 150, 0.3);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(150, 150, 150, 0.6);
+}
+
+/* ---------------------------------------------------
+   3. ESTRUCTURA PRINCIPAL (LAYOUT)
+----------------------------------------------------- */
 #wrapper {
     display: flex;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    padding: 0 !important;
-    /* AdminKit va de orilla a orilla */
+    padding: 15px;
     box-sizing: border-box;
 }
 
 /* ---------------------------------------------------
-   4. MENÚ LATERAL (SIDEBAR) ESTILO ADMINKIT
+   4. MENÚ LATERAL FLOTANTE (SIDEBAR)
 ----------------------------------------------------- */
 #sidebar {
-    width: 260px;
-    min-width: 260px;
-    height: 100vh;
-    margin-right: 0;
-    border-radius: 0 !important;
-    /* Bordes planos */
+    width: 280px;
+    min-width: 280px;
+    height: calc(100vh - 30px);
+    margin-right: 20px;
+    border-radius: 24px;
     background: var(--glass-sidebar);
-    border-right: 1px solid var(--glass-border-sidebar);
-    box-shadow: none;
-    /* AdminKit no le pone sombra al sidebar */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border-sidebar);
+    box-shadow: var(--glass-shadow);
     color: var(--text-sidebar);
+    transition: left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     display: flex;
     flex-direction: column;
     z-index: 1050;
@@ -135,67 +184,56 @@ body {
 
 .sidebar-heading {
     letter-spacing: 1.5px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-    padding: 20px !important;
-    text-align: left !important;
-    font-size: 1.1rem;
+    border-bottom: 1px solid var(--glass-border-sidebar) !important;
+    padding: 30px 20px !important;
 }
 
 #sidebar .nav-link {
-    color: rgba(233, 236, 239, 0.7);
-    padding: 0.65rem 1.5rem;
-    border-radius: 0 !important;
-    /* AdminKit no redondea los items enteros */
-    margin: 0;
-    opacity: 1;
-    transition: all 0.2s ease-in-out;
+    color: var(--text-sidebar);
+    padding: 12px 20px;
+    border-radius: 14px;
+    margin: 5px 15px;
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
     display: flex;
     align-items: center;
-    font-size: 0.9rem;
-    font-weight: 400;
-    border-left: 3px solid transparent;
-    /* Preparando el borde izquierdo activo */
+    font-size: 0.95rem;
+    font-weight: 300;
 }
 
 #sidebar .nav-link i {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     width: 30px;
-    text-align: left;
+    text-align: center;
     transition: color 0.3s ease;
 }
 
 #sidebar .nav-link:hover {
     background-color: var(--hover-sidebar);
-    color: #e9ecef;
-    border-left-color: rgba(255, 255, 255, 0.5);
-    transform: none;
-    /* Quitamos el salto horizontal */
+    opacity: 1;
+    transform: translateX(4px);
 }
 
 #sidebar .nav-link.active {
     background-color: var(--active-sidebar);
-    color: #ffffff;
+    opacity: 1;
     font-weight: 500;
-    border-left: 3px solid var(--active-border);
-    /* La famosa rayita de AdminKit */
-    box-shadow: none;
+    box-shadow: inset 0 0 0 1px var(--glass-border-sidebar);
 }
 
 #sidebar .nav-link.active i {
-    color: inherit;
+    color: var(--accent-color);
 }
 
 #sidebar .opacity-75 {
-    color: rgba(233, 236, 239, 0.5) !important;
-    letter-spacing: 1px;
-    font-size: 0.75rem;
+    color: var(--text-muted) !important;
+    letter-spacing: 1.5px;
+    font-size: 0.7rem;
     margin-top: 15px;
-    padding: 0 1.5rem;
-    text-transform: uppercase;
 }
 
 /* ---------------------------------------------------
-   5. NAVBAR Y ÁREA DE CONTENIDO
+   5. ÁREA DE CONTENIDO, NAVBAR Y SCROLL AISLADO
 ----------------------------------------------------- */
 #page-content-wrapper {
     flex: 1;
@@ -207,118 +245,78 @@ body {
 }
 
 .custom-navbar {
-    border-radius: 0 !important;
-    margin-bottom: 0 !important;
+    border-radius: 20px;
+    margin-bottom: 15px;
     background: var(--glass-panel);
-    border: none;
-    border-bottom: 1px solid var(--glass-border-panel);
-    box-shadow: none;
-    /* Navbar plana */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border-panel);
+    box-shadow: var(--glass-shadow);
     color: var(--text-main);
-    min-height: 60px;
-    padding: 0.5rem 2rem;
+    min-height: 75px;
     flex-shrink: 0;
 }
 
 .custom-navbar h5 {
-    font-weight: 500;
-    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
-/* Selector de Temas adaptado a barra superior */
 .theme-selector-nav {
     display: flex;
-    gap: 5px;
-    background: transparent;
-    padding: 0;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+[data-theme="oscuro"] .theme-selector-nav {
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .theme-btn {
-    background: var(--bg-main);
-    border: 1px solid var(--glass-border-panel);
+    background: transparent;
+    border: none;
     color: var(--text-muted);
-    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.2s;
-    padding: 4px 8px;
+    transition: color 0.3s, transform 0.2s;
+    padding: 0 5px;
 }
 
 .theme-btn:hover,
 .theme-btn.active {
     color: var(--accent-color);
-    border-color: var(--accent-color);
+    transform: scale(1.1);
 }
 
-/* El área de módulos (Aquí va el margen estilo AdminKit) */
 .module-container {
     flex: 1 1 auto;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 2rem !important;
-    /* Espacio limpio alrededor de todo */
+    height: 0;
+    padding-right: 5px;
+    padding-bottom: 20px;
 }
 
 /* ---------------------------------------------------
-   6. TARJETAS (CARDS) Y MODALES ADMINKIT
+   6. TARJETAS (CARDS)
 ----------------------------------------------------- */
 .card {
-    border-radius: 0.3rem !important;
-    /* Esquinas ligeramente redondeadas */
-    background-color: var(--glass-panel);
-    border: 1px solid var(--glass-border-panel) !important;
-    box-shadow: var(--glass-shadow) !important;
+    border-radius: 20px;
+    background: var(--glass-panel);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border-panel);
+    box-shadow: var(--glass-shadow);
     color: var(--text-main);
-    margin-bottom: 1.5rem !important;
-}
-
-.card-header {
-    background-color: transparent !important;
-    border-bottom: 1px solid var(--glass-border-panel) !important;
-    padding: 1rem 1.25rem !important;
 }
 
 .card-body {
-    padding: 1.25rem !important;
-}
-
-.modal-content {
-    border-radius: 0.3rem !important;
-    background-color: var(--glass-panel) !important;
-    border: 1px solid var(--glass-border-panel) !important;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    padding: 2rem;
 }
 
 /* ---------------------------------------------------
-   7. INPUTS Y TABLAS
------------------------------------------------------ */
-.form-control,
-.form-select {
-    background-color: transparent !important;
-    border: 1px solid var(--glass-border-panel) !important;
-    color: var(--text-main) !important;
-    border-radius: 0.25rem !important;
-}
-
-.form-control:focus,
-.form-select:focus {
-    border-color: var(--accent-color) !important;
-    box-shadow: 0 0 0 0.2rem rgba(59, 125, 221, 0.25) !important;
-}
-
-.table th {
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 0.5px;
-    border-bottom: 2px solid var(--glass-border-panel) !important;
-}
-
-.table td {
-    border-bottom: 1px solid var(--glass-border-panel) !important;
-}
-
-/* ---------------------------------------------------
-   8. RESPONSIVE Y MÓVILES
+   7. RESPONSIVE Y MÓVILES
 ----------------------------------------------------- */
 .sidebar-overlay {
     display: none;
@@ -327,26 +325,27 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
     z-index: 1040;
 }
 
 @media (max-width: 768px) {
-    .module-container {
-        padding: 1rem !important;
+    #wrapper {
+        padding: 10px;
     }
 
     #sidebar {
         position: fixed;
         top: 0;
-        left: -260px;
+        left: -320px;
         height: 100vh;
         margin: 0;
-        box-shadow: none;
+        border-radius: 0 24px 24px 0;
     }
 
     #sidebar.toggled {
         left: 0;
-        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
     }
 }

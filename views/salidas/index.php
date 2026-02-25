@@ -238,7 +238,8 @@ $jsonProductos = json_encode($productos_data);
                                 <option value="">Buscar empleado...</option>
                                 <?php foreach ($personal as $pers): ?>
                                     <option value="<?= $pers['id'] ?>">
-                                        <?= htmlspecialchars($pers['nombres'] . ' ' . $pers['apellidos']) ?></option>
+                                        <?= htmlspecialchars($pers['nombres'] . ' ' . $pers['apellidos']) ?>
+                                    </option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
@@ -275,7 +276,8 @@ $jsonProductos = json_encode($productos_data);
                                 <option value="">Escribe código o nombre...</option>
                             </select>
                             <div id="adder_stock_label" class="small mt-1 fw-bold text-success d-none">Stock:
-                                <span>0</span></div>
+                                <span>0</span>
+                            </div>
                         </div>
                         <div class="col-md-3">
                             <label class="form-label small fw-bold text-primary mb-1">Unidad a entregar</label>

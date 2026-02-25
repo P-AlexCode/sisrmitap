@@ -125,9 +125,6 @@
         const accentColor = rootStyles.getPropertyValue('--accent-color').trim() || '#ff9e1b';
         const textMuted = rootStyles.getPropertyValue('--text-muted').trim() || '#6c757d';
 
-        // Generamos un color translúcido para el fondo de la curva
-        // Chart.js necesita rgba, así que usamos un pequeño truco para convertir hex o usar el color base
-
         new Chart(ctx, {
             type: 'line',
             data: {
